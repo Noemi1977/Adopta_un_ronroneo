@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <h1>🐾 Adopta un ronroneo</h1>
+      <h1>Adopta un ronroneo</h1>
       <CatsSlider></CatsSlider>
 
     </div>
