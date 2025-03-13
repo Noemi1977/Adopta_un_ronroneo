@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los enlaces */
+    padding: 10px 0; /* Espacio interno arriba y abajo */
+    background-color: #f8f9fa; /* Color de fondo */
+    border-bottom: 1px solid #e0e0e0; /* Borde inferior */
+    margin-bottom: 20px; /* Espacio debajo del NavBar */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    font-weight: 500;
+    padding: 5px 10px; /* Espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el ratón */
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: #007bff; /* Color del texto activo */
+  }

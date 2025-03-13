@@ -1,4 +1,10 @@
-import { useState } from 'react'
+
+import { Routes, Route, Navigate } from "react-router-dom";
+import Inicio from "./components/pages/Inicio.jsx"; 
+import Adopta from "./components/pages/Adopta.jsx"; 
+import Sobrenosotros from "./components/pages/Sobrenosotros.jsx"; 
+import Contacto from "./components/pages/Contacto.jsx";
+import NavBar from "./components/NavBar/NavBar.jsx"
 import CatsSlider from "./components/CatsSlider/CatSlider";
 import CatsCard from "./components/CatCard/CatCard";
 
@@ -9,12 +15,22 @@ function App() {
  
 
   return (
-    <div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/Sobrenosotros" element={<Sobrenosotros />} />
+        <Route path="/Adopta" element={<Adopta />} />
+        <Route path="/Contacto" element={<Contacto />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <div>
       <h1>Adopta un ronroneo</h1>
       <CatsSlider></CatsSlider>
 
     </div>
-  )
-}
+    </>
+  );
+};
 
-export default App
+export default App;
