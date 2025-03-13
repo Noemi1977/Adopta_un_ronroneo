@@ -1,14 +1,23 @@
-// no importamos nada porque es un cmponete de presentacion y recibe los datos por props y toma los datos de CatsSlider
+import { useNavigate } from "react-router-dom";
+
 function CatsCard({ cat }) {
+  const navigate = useNavigate();
+
+  const handleAdoptClick = () => {
+    navigate("./construction.jsx"); // Redirige a la página en construcción
+  };
+
     return (
       <div style={styles.card}>
         <img src={cat.url} alt="Cat" style={styles.image} />
         <p><strong>ID:</strong> {cat.id}</p>
         
-        <button style={{ marginTop: "10px", padding: "5px 10px", backgroundColor: "#28a745", color: "white", border: "none", borderRadius: "5px" }}>
-          Adoptar
-        </button>
-      
+        <button 
+        onClick={handleAdoptClick} 
+        style={styles.button}
+      >
+        Adoptar
+      </button>
       </div>
     );
   }
