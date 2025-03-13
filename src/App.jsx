@@ -7,38 +7,33 @@ import Contacto from "./components/pages/Contacto.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx"
 import CatsSlider from "./components/CatsSlider/CatSlider";
 import CatsCard from "./components/CatCard/CatCard";
-import App from "../App";
-import PageInConstruction from "../pages/PageInConstruction"; // Crea esta página
 
-
-
+import PageInConstruction from "./components/pages/PageInConstruction.jsx"; // Crea esta página
 
 function App() {
  
-
   return (
+    
     <>
+  <div>
+    <h1>Adopta un ronroneo</h1>
+    
+  </div>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Inicio />} />
+      <Route path="/" element={<><Inicio /></>} />
+
+
         <Route path="/Sobrenosotros" element={<Sobrenosotros />} />
-        <Route path="/Adopta" element={<Adopta />} />
+        <Route path="/Adopta" element={<><Adopta /><CatsSlider /></>} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/construction" element={<PageInConstruction />} />
+
+
         <Route path="*" element={<Navigate to="/" />} />
         
       </Routes>
-      <div>
-      <h1>Adopta un ronroneo</h1>
-      <CatsSlider></CatsSlider>
-      <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-       
-      </Routes>
-    </Router>
-
-    </div>
+     
     </>
   );
 };

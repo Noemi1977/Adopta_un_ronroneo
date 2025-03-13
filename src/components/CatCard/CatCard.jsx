@@ -4,9 +4,11 @@ function CatsCard({ cat }) {
   const navigate = useNavigate();
 
   const handleAdoptClick = () => {
-    navigate("./construction.jsx"); // Redirige a la página en construcción
+    navigate("/construction"); // Redirige a la página en construcción
   };
-
+  if (!cat) {
+    return <div>No hay información del gato disponible.</div>;
+  }
     return (
       <div style={styles.card}>
         <img src={cat.url} alt="Cat" style={styles.image} />
@@ -21,7 +23,6 @@ function CatsCard({ cat }) {
       </div>
     );
   }
-  
   const styles = {
     card: {
       border: "1px solid #ddd",
@@ -30,12 +31,13 @@ function CatsCard({ cat }) {
       textAlign: "center",
       width: "220px",
       backgroundColor: "#fff",
-      boxShadow: "2px 2px 10px rgba(0,0,0,0.1)"
+      boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)"
     },
     image: {
       width: "200px",
       borderRadius: "5px"
     }
   };
-  
   export default CatsCard;
+  
+  
