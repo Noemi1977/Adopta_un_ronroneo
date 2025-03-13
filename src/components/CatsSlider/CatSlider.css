@@ -33,4 +33,9 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
-  
+  .cat-image {
+    height: 480px; /* Forzamos altura */
+    width: auto; /* Mantenemos la proporción */
+    object-fit: cover; /* Ajusta sin deformar */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+  }
