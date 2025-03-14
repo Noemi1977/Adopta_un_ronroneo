@@ -16,7 +16,7 @@ function CatSlider() {
     getCats();
   }, []);
 
-  const nCard = 5;
+  const nCard = 7;
 
   const nextCard = () => {
     if (slider + nCard < cats.length) {

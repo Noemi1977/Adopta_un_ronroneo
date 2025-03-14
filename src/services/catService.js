@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://api.thecatapi.com/v1/images/search?limit=10";
+const API_URL = "https://api.thecatapi.com/v1/images/search?limit=20";
 const API_KEY = "live_xR2TUfUJM57eCOuupoNfWYtDRBDd2qxwnVrG3MiROhHTmVSsVtHXs0IbfUGeYoHQ";
 
 export const fetchCats = async () => {

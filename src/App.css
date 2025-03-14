@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,3 +42,8 @@
   color: black;
 }
 
+.links_router{
+  display: flex;
+  flex-direction:row left;
+
+}
