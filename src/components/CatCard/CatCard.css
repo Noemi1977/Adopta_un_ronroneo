@@ -1,5 +1,4 @@
 .cat-card {
-
   border: 1px solid #ddd;
 
   border-radius: 10px;
@@ -23,11 +22,9 @@
   justify-content: space-between;
 
   align-items: center;
-
 }
 
 .image-container {
-
   width: 100%;
 
   height: 180px;
@@ -39,21 +36,17 @@
   align-items: center;
 
   overflow: hidden;
-
 }
 
 .cat-image {
+  max-width: 100%;
 
-  max-width: 100%; 
-
-  max-height: 100%; 
+  max-height: 100%;
 
   border-radius: 5px;
-
 }
 
 .button-container {
-
   width: 100%;
 
   display: flex;
@@ -61,11 +54,9 @@
   justify-content: center;
 
   margin-top: 10px;
-
 }
 
 .adopt-button {
-
   padding: 5px 10px;
 
   background-color: #28a745;
@@ -77,11 +68,8 @@
   border-radius: 5px;
 
   cursor: pointer;
-
 }
 
 .adopt-button:hover {
-
   background-color: #218838;
-
 }
