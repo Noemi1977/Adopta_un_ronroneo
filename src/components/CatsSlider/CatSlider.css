@@ -1,41 +1,41 @@
-/* Contenedor principal del slider */
+/* /* Contenedor principal del slider / */
 .slider-container {
-    display: flex;
-    align-items: center; /* Centra verticalmente los botones */
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  /* Contenedor de las tarjetas */
-  .cards-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  /* Estilos de los botones */
-  .slider-button {
-    padding: 10px 15px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Deshabilitar botones cuando no se puede avanzar */
-  .slider-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  .cat-image {
-    height: 480px; /* Forzamos altura */
-    width: auto; /* Mantenemos la proporción */
-    object-fit: cover; /* Ajusta sin deformar */
-    border-radius: 10px; /* Opcional: bordes redondeados */
-  }
+  display: flex;
+  align-items: center; 
+  justify-content:center;
+  gap: 20px;
+}
+
+/* / Contenedor de las tarjetas / */
+.cards-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* / Estilos de los botones / */
+.slider-button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* / Deshabilitar botones cuando no se puede avanzar / */
+.slider-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.cat-image {
+  height: 480px; 
+  width: auto; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
