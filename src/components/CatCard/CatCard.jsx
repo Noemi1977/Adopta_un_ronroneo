@@ -1,19 +1,43 @@
-import "./CatCard.css";
+import { useNavigate } from "react-router-dom";
 
 function CatsCard({ cat }) {
-  return (
-    <div className="cat-card">
-      <div className="image-container">
-        <img src={cat.url} alt="Cat" className="cat-image" />
+  const navigate = useNavigate();
+
+  const handleAdoptClick = () => {
+    navigate("/construction"); // Redirige a la página en construcción
+  };
+  if (!cat) {
+    return <div>No hay información del gato disponible.</div>;
+  }
+    return (
+      <div style={styles.card}>
+        <img src={cat.url} alt="Cat" style={styles.image} />
+        <p><strong>ID:</strong> {cat.id}</p>
+        
+        <button 
+        onClick={handleAdoptClick} 
+        style={styles.button}
+      >
+        Adoptar
+      </button>
       </div>
-
-      <p><strong>ID:</strong> {cat.id}</p>
-
-      <div className="button-container">
-        <button className="adopt-button">Adoptar</button>
-      </div>
-    </div>
-  );
-}
-
-export default CatsCard;
+    );
+  }
+  const styles = {
+    card: {
+      border: "1px solid #ddd",
+      borderRadius: "10px",
+      padding: "10px",
+      textAlign: "center",
+      width: "220px",
+      backgroundColor: "#fff",
+      boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)"
+    },
+    image: {
+      width: "200px",
+      borderRadius: "5px"
+    }
+  };
+  export default CatsCard;
+  
+  
