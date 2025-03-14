@@ -1,15 +1,28 @@
 .navbar {
     display: flex;
-    justify-content: flex-end;
     gap: 20px; 
     padding: 10px 0; 
     background-color: #f8f9fa;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 20px;
   }
+
+  .logo-link {
+    display: flex;
+    justify-content: right;
+    align-items: center; 
+  }
+  
+  .logo {
+    height: 200px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 50%;
+  }
   
   .nav-link {
     text-decoration: none;
+    justify-content :right;
     color: #333; 
     font-weight: 500;
     padding: 5px 10px; 
@@ -25,3 +38,4 @@
     font-weight: bold;
     color: #007bff; 
   }
+  
