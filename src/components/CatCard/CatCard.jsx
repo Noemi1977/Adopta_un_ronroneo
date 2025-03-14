@@ -11,14 +11,14 @@ function CatsCard({ cat }) {
     return <div>No hay información del gato disponible.</div>;
   }
     return (
-      <div>
-        <div className="cat-card">
+      <div className="cat-card">
+        <div className="image-container">
           <img src={cat.url} alt="Cat" className="cat-image" />
         </div>
         
         <div>
           
-            <button className="button-container"
+            <button className="adopt-button"
           onClick={handleAdoptClick} 
         >
           Adoptar

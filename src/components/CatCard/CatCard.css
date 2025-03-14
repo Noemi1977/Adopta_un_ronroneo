@@ -12,7 +12,7 @@
 
   height: 320px;
 
-  background-color: #fff;
+  background-color: rgba(243, 240, 233, 1);
 
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
@@ -52,7 +52,7 @@
 
 }
 
-.button-container {
+/* .button-container {
 
   width: 100%;
 
@@ -62,15 +62,15 @@
 
   margin-top: 10px;
 
-}
+} */
 
 .adopt-button {
 
   padding: 5px 10px;
 
-  background-color: #28a745;
+  background-color: rgba(129, 202, 161, 1);
 
-  color: white;
+  color: rgba(94, 70, 41, 1);
 
   border: none;
 

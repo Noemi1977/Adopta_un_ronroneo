@@ -50,11 +50,17 @@ p {
   line-height: 1.1;
   margin-bottom: 20px;
 }
+.container_adopt{
+  display: block; /* Usamos flexbox para organizar las columnas */
+  margin-left: 70px;
+ margin-bottom: 50px;
 
+}
 
 /* Contenedor principal para las dos secciones */
 .container {
   display: flex; /* Usamos flexbox para organizar las columnas */
+  flex-direction: block;
   justify-content: space-between; /* Alinea las secciones a la izquierda y derecha */
   align-items: center; /* Centra las secciones verticalmente */
   gap: 20px; /* Espacio entre las dos secciones */

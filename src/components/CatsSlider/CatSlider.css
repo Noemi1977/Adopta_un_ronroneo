@@ -17,12 +17,13 @@
 .slider-button {
   padding: 10px 15px;
   font-size: 18px;
-  background-color: #007bff;
+  background-color: #67696b;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
   height: 50px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
