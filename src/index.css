@@ -4,22 +4,26 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color:white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgba(94, 70, 41, 1);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: rgba(94, 70, 41, 1);
 }
 
 body {
@@ -31,8 +35,58 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.3em;
   line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 0.8em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.container_adopt{
+  display: block; /* Usamos flexbox para organizar las columnas */
+  margin-left: 70px;
+ margin-bottom: 50px;
+
+}
+
+/* Contenedor principal para las dos secciones */
+.container {
+  display: flex; /* Usamos flexbox para organizar las columnas */
+  flex-direction: block;
+  justify-content: space-between; /* Alinea las secciones a la izquierda y derecha */
+  align-items: center; /* Centra las secciones verticalmente */
+  gap: 20px; /* Espacio entre las dos secciones */
+  padding: 20px;
+}
+
+/* Estilos para la sección izquierda (contenido de texto) */
+.sectionInit {
+  flex: 1; /* Ocupa el 50% del contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: white; /* Fondo claro para la sección */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para la sección derecha (imagen) */
+.sectionImg {
+  flex: 1; /* Ocupa el 50% del contenedor */
+  text-align: center; /* Centra la imagen */
+}
+
+/* Estilos para la imagen */
+.sectionImg img {
+  width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+  max-width: 500px; /* Limita el ancho máximo de la imagen */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
 button {
@@ -42,9 +96,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color:rgba(129, 202, 161, 1);
   cursor: pointer;
   transition: border-color 0.25s;
+  color:rgba(94, 70, 41, 1);
 }
 button:hover {
   border-color: #646cff;
