@@ -6,53 +6,26 @@ import logo from "/Logo.png";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <NavLink to="/" className="logo-link">
-        <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-      </NavLink>
-
-      <NavLink
-        className="nav-link"
-        to="/"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-        })}
-      >
+    <NavLink to="/" className="logo-container">
+      <img src={logo} alt="Logo" className="logo" />
+    </NavLink>
+    <div className="nav-links">
+      <NavLink className="nav-link" to="/" activeclassname="active">
         Inicio
       </NavLink>
-
-      <NavLink
-        className="nav-link"
-        to="/Adopta"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-        })}
-      >
+      <NavLink className="nav-link" to="/Adopta" activeclassname="active">
         Adopta
       </NavLink>
-
-      <NavLink
-        className="nav-link"
-        to="/Sobrenosotros"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-        })}
-      >
+      <NavLink className="nav-link" to="/Sobrenosotros" activeclassname="active">
         Sobre Nosotros
       </NavLink>
-
-      <NavLink
-        className="nav-link"
-        to="/Contacto"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-        })}
-      >
+      <NavLink className="nav-link" to="/Contacto" activeclassname="active">
         Contacto
       </NavLink>
-    </nav>
-  );
+    </div>
+  </nav>
+);
 };
+
 
 export default NavBar;
