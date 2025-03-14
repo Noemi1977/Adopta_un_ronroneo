@@ -15,10 +15,7 @@ function App() {
   return (
     
     <>
-  <div>
-    <h1>Adopta un ronroneo</h1>
-    
-  </div>
+  
       <NavBar />
       <Routes>
       <Route path="/" element={<><Inicio /></>} />
