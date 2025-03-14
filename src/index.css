@@ -61,6 +61,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /*Ajusto los margenes automaticamente*/
+  margin-top: 150px;
 }
 
 
