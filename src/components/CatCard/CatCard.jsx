@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./CatCard.css"; 
 
 function CatsCard({ cat }) {
   const navigate = useNavigate();
@@ -10,34 +11,24 @@ function CatsCard({ cat }) {
     return <div>No hay información del gato disponible.</div>;
   }
     return (
-      <div style={styles.card}>
-        <img src={cat.url} alt="Cat" style={styles.image} />
-        <p><strong>ID:</strong> {cat.id}</p>
+      <div>
+        <div className="cat-card">
+          <img src={cat.url} alt="Cat" className="cat-image" />
+        </div>
         
-        <button 
-        onClick={handleAdoptClick} 
-        style={styles.button}
-      >
-        Adoptar
-      </button>
+        <div>
+          
+            <button className="button-container"
+          onClick={handleAdoptClick} 
+        >
+          Adoptar
+          </button>
+        
+        </div>
       </div>
     );
   }
-  const styles = {
-    card: {
-      border: "1px solid #ddd",
-      borderRadius: "10px",
-      padding: "10px",
-      textAlign: "center",
-      width: "220px",
-      backgroundColor: "#fff",
-      boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)"
-    },
-    image: {
-      width: "200px",
-      borderRadius: "5px"
-    }
-  };
+  
   export default CatsCard;
   
   
