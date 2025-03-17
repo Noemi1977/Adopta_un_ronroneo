@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Inicio from "./components/pages/Inicio.jsx"
-
 import Adopta from "./components/pages/Adopta.jsx";
 import Sobrenosotros from "./components/pages/Sobrenosotros.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";

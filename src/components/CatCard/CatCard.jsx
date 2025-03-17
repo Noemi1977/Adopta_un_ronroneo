@@ -7,7 +7,7 @@ function CatsCard({ cat }) {
   
   const handleAdoptClick = () => {
     navigate("/Contacto"); // Redirige a la página de contacto
-    
+   
   };
 
   if (!cat) {
