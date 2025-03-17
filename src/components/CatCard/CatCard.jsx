@@ -1,34 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import "./CatCard.css"; 
+import "./CatCard.css";
 
 function CatsCard({ cat }) {
   const navigate = useNavigate();
-
+  
   const handleAdoptClick = () => {
-    navigate("/construction"); // Redirige a la página en construcción
+    navigate("/Contacto"); // Redirige a la página de contacto
   };
+
   if (!cat) {
     return <div>No hay información del gato disponible.</div>;
   }
-    return (
-      <div className="cat-card">
-        <div className="image-container">
-          <img src={cat.url} alt="Cat" className="cat-image" />
-        </div>
-        
-        <div>
-          
-            <button className="adopt-button"
-          onClick={handleAdoptClick} 
-        >
-          Adoptar
-          </button>
-        
-        </div>
+
+  return (
+    <div className="cat-card">
+      <div className="image-container">
+        <img src={cat.url} alt="Cat" className="cat-image" />
       </div>
-    );
-  }
-  
-  export default CatsCard;
-  
-  
+      <div>
+        <button className="adopt-button" onClick={handleAdoptClick}>
+          Adoptar
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default CatsCard;
