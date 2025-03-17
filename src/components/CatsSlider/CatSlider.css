@@ -1,22 +1,22 @@
-/* /* Contenedor principal del slider / */
+/*Contenedor principal del slider */
 .slider-container {
   display: flex;
-  align-items: center; 
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 50px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
-/* / Contenedor de las tarjetas / */
+/* Contenedor de las tarjetas */
 .cards-container {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
-  
+  flex-wrap: wrap; /* Hace que las tarjetas se acomoden en varias filas si es necesario */
+  justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
 }
 
-/* / Estilos de los botones / */
+/*  Estilos de los botones */
 .slider-button {
   padding: 10px 15px;
   font-size: 18px;
@@ -30,16 +30,73 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s;
 }
 
-/* / Deshabilitar botones cuando no se puede avanzar / */
+.slider-button:hover {
+  background-color: #4a4c4e;
+}
+
+/* Deshabilitar botones cuando no se puede avanzar */
 .slider-button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+/* Imagen de los gatos */
 .cat-image {
-  height: 480px; 
-  width: auto; 
-  object-fit: cover; 
-  border-radius: 10px; 
+  height: 480px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/*  Para pantallas pequeñas (máx. 480px) */
+@media (max-width: 480px) {
+  .slider-container {
+    flex-direction: column; 
+    gap: 10px; 
+    margin: 0 20px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .cat-image {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+/* Para tablets y pantallas medianas (481px - 768px) */
+@media (max-width: 768px) {
+  .slider-container {
+    gap: 15px;
+    margin: 0 30px;
+  }
+
+  .cards-container {
+    justify-content: center;
+  }
+
+  .cat-image {
+    height: 350px;
+    width: auto;
+  }
+}
+
+/* Para pantallas grandes (más de 768px) */
+@media (min-width: 769px) {
+  .slider-container {
+    margin: 0 50px;
+  }
 }
