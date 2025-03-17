@@ -4,10 +4,11 @@ import "./CatCard.css";
 
 function CatsCard({ cat }) {
   const navigate = useNavigate();
-
+  
   const handleAdoptClick = () => {
-    navigate("/construction"); // Redirige a la página en construcción
+    navigate("/Contacto"); // Redirige a la página de contacto
   };
+
   if (!cat) {
     return <div>No hay información del gato disponible.</div>;
   }
@@ -26,13 +27,10 @@ function CatsCard({ cat }) {
           onClick={handleAdoptClick} 
         >
           Adoptar
-          </button>
-        
-        </div>
+        </button>
       </div>
-    );
-  }
-  
-  export default CatsCard;
-  
-  
+    </div>
+  );
+}
+
+export default CatsCard;
