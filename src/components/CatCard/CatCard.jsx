@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./CatCard.css"; 
 
+
 function CatsCard({ cat }) {
   const navigate = useNavigate();
 
@@ -15,7 +16,10 @@ function CatsCard({ cat }) {
         <div className="image-container">
           <img src={cat.url} alt="Cat" className="cat-image" />
         </div>
-        
+        <div>
+        <h3>{cat.name}</h3>
+        <p>{cat.temperament}</p>
+        </div>
         <div>
           
             <button className="adopt-button"
