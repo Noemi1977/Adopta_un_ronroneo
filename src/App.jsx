@@ -6,6 +6,7 @@ import Sobrenosotros from "./components/pages/Sobrenosotros.jsx";
 import Contacto from "./components/pages/Contacto.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx"
 import CatsSlider from "./components/CatsSlider/CatSlider";
+import Formulario from "./components/Adopt-form/Adopt-form.jsx";
 import CatsCard from "./components/CatCard/CatCard";
 
 import PageInConstruction from "./components/pages/PageInConstruction.jsx"; // Crea esta página
@@ -25,6 +26,8 @@ function App() {
         <Route path="/Adopta" element={<><Adopta /><CatsSlider /></>} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/construction" element={<PageInConstruction />} />
+        <Route path="/adoptar" element={<Formulario />} />
+        {/* <Route path="/cat/:id" element={<CatsCard />} /> */}
 
 
         <Route path="*" element={<Navigate to="/" />} />

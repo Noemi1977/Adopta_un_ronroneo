@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./CatCard.css"; 
 
+
 function CatsCard({ cat }) {
   const navigate = useNavigate();
 
   const handleAdoptClick = () => {
-    navigate("/construction"); // Redirige a la página en construcción
+    navigate("/adoptar"); // Redirige a la página en construcción
   };
   if (!cat) {
     return <div>No hay información del gato disponible.</div>;
