@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f4f4f4; 
+  }
+  
+  
+  .form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  
+  label {
+    font-weight: bold;
+    color: #555;
+    width: 120px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 120px;
+  }
+  
+  .checkbox-group label {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .checkbox-terminos {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 8px; 
+    margin-top: 10px;
+  }
+  
+  .checkbox-terminos input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-right: 5px; 
+  }
+  
+  .checkbox-terminos label {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .error-message {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
