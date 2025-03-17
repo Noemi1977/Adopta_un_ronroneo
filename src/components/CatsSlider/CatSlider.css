@@ -13,7 +13,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap; /* Hace que las tarjetas se acomoden en varias filas si es necesario */
-  justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
+  justify-content: center; 
 }
 
 /*  Estilos de los botones */
