@@ -35,17 +35,17 @@ function AdoptForm() {
 
       <form onSubmit={onSubmit}>
         <div className="input-group">
-          <label htmlFor="nombre">Nombre</label>
+          <label>Nombre</label>
           <input type="text" {...register("nombre", {
             required: { value: true, message: "Nombre es requerido" },
             minLength: { value: 3, message: "Mínimo 3 caracteres" },
             maxLength: { value: 40, message: "Máximo 40 caracteres" }
           })} />
         </div>
-        {errors.nombre && <span>{errors.nombre.message}</span>}
+        {errors.nombre && <span className="error-message">{errors.nombre.message}</span>}
 
         <div className="input-group">
-          <label htmlFor="email">Correo</label>
+          <label>Correo</label>
           <input type="email" {...register("email", {
             required: { value: true, message: "Correo requerido" },
             pattern: {
@@ -54,15 +54,15 @@ function AdoptForm() {
             }
           })} />
         </div>
-        {errors.email && <span>{errors.email.message}</span>}
+        {errors.email && <span className="error-message">{errors.email.message}</span>}
 
               <div className="input-group">
-          <label htmlFor="telefono">Teléfono</label>
+          <label>Teléfono</label>
           <input type="text" {...register("telefono",{
                required: { value: true, message: "Necesitamos un teléfono de contacto" },
                pattern: { value: /^[0-9]{9}$/, message: "El teléfono debe tener 9 dígitos numéricos" }
           })} />
-          {errors.telefono && <span>{errors.telefono.message}</span>}
+          {errors.telefono && <span className="error-message">{errors.telefono.message}</span>}
 
         </div>
 
@@ -93,7 +93,7 @@ function AdoptForm() {
         </div>
 
         <div className="input-group">
-          <label htmlFor="mensaje">Mensaje</label>
+          <label>Mensaje</label>
           <textarea 
             id="mensaje" 
             {...register("mensaje", {
@@ -102,7 +102,7 @@ function AdoptForm() {
             rows="4"
           ></textarea>
         </div>
-        {errors.mensaje && <span>{errors.mensaje.message}</span>}
+        {errors.mensaje && <span className="error-message">{errors.mensaje.message}</span>}
         
       <div className="checkbox-terminos">
         <label>

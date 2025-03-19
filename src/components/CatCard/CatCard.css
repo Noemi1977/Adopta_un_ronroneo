@@ -46,18 +46,6 @@
   border-radius: 5px;
 }
 
-/* .button-container {
-
-  width: 100%;
-
-  display: flex;
-
-  justify-content: center;
-
-  margin-top: 10px;
-
-} */
-
 .adopt-button {
   padding: 5px 10px;
 
@@ -74,4 +62,17 @@
 
 .adopt-button:hover {
   background-color: #218838;
+}
+.favorite-button {
+  width: 30px; 
+  height: 30px;
+  font-size: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.favorite-button:hover {
+  opacity: 1; /* Al pasar el mouse, se vuelve más visible */
+  filter: grayscale(0%); /* Vuelve el emoji a color */
 }

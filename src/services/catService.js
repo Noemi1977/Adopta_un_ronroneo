@@ -9,6 +9,8 @@ export const fetchCats = async () => {
       headers: { "x-api-key": API_KEY }
     });
     console.log(response.data);
+    localStorage.removeItem("favorites");
+
     //  map crea un nuevo array y recorre cada gato y transforma los datos en un nuevo objeto con la estructura que queremos.
     return response.data.map(cat=>({
       id: cat.id,
