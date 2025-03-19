@@ -1,6 +1,5 @@
 import React from 'react';
-// import AdoptForm from '../components/AdoptForm/AdoptForm';
-import AdoptForm from '../AdoptForm/AdoptForm';
+import AdoptForm from '../components/AdoptForm/AdoptForm';
 
 const Contacto = () => {
   return (
