@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import './Adopt-form.css'; 
+import './AdoptForm.css'; 
 
-function Formulario() {
+function AdoptForm() {
   const { register, handleSubmit, watch, setValue, reset, formState: { errors } } = useForm();
   const [mensajeExito, setMensajeExito] = useState(""); 
 
@@ -124,5 +124,5 @@ function Formulario() {
   );
 }
 
-export default Formulario;
+export default AdoptForm;
 
