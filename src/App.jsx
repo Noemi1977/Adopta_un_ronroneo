@@ -6,8 +6,8 @@ import Sobrenosotros from "./components/pages/Sobrenosotros.jsx";
 import Contacto from "./components/pages/Contacto.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx"
 import CatsSlider from "./components/CatsSlider/CatSlider";
-import CatsCard from "./components/CatCard/CatCard";
-
+// import CatsCard from "./components/CatCard/CatCard";
+// import ListadoCat from "./components/Listado/ListadoCat.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx"; // Crea esta página
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     
     <>
-  
+    {/* <ListadoCat></ListadoCat> */}
       <NavBar />
       <Routes>
       <Route path="/" element={<><Inicio /></>} />
