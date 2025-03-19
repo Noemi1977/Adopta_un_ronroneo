@@ -8,6 +8,7 @@ function CatSlider() {
   const [slider, setSelider] = useState(0);
 
   useEffect(() => {
+    localStorage.removeItem("favorites"); //limpiar favoritos
     const getCats = async () => {
       const catsData = await fetchCats();
       setCats(catsData);

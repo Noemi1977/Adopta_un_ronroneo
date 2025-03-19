@@ -8,6 +8,7 @@ import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 
 function App() {
+  
   return (
     <Router>
       <NavBar />

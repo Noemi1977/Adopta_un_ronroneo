@@ -1,20 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 import "./CatCard.css"; 
 
 // iniciaalizamos el useReducer cogiendo los datos de favoritos del localStore o delvolvemos un objeto vacio
 //  parce se encarga e convertirlo en un objeto
-
 const initState = JSON.parse(localStorage.getItem("favorites")) || {};
 
-// funcion reducer para controlar cuando cambia el valor de favoritos
+// funcion reducer para controlar cuando cambia el valor de favoritos en stateFav
 function reducer(state, action){
   switch (action.type){
     case "cambioFav":
       const newState = {...state, [action.payload]:!state[action.payload],};
       localStorage.setItem("favorites",JSON.stringify(newState));
       // transforma el objeto newState en una cadena de texto que puede ser almacenada en localStorage
-      console.log(newState);
+      // console.log(newState);
       return newState;
     default:
       return state
@@ -27,8 +26,13 @@ function reducer(state, action){
 function CatsCard({ cat }) {
   const navigate = useNavigate();
   const [stateFav, dispatch] = useReducer(reducer, initState );
-  const favoritosActivados = Object.keys(stateFav).filter(id => stateFav[id]);
-  
+      
+  // Guardar en localStorage cada vez que cambien los favoritos
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(stateFav));
+    // console.log(JSON.parse(localStorage.getItem("favorites")));
+  }, [stateFav]);
+
   const handleAdoptClick = () => {
     navigate("/Contacto"); 
   };
@@ -39,7 +43,6 @@ function CatsCard({ cat }) {
 const cambiarFav= ()=>{
   dispatch({type:"cambioFav", payload: cat.id})
   // console.log({type:"cambioFav", payload: cat.id});
-  console.log(favoritosActivados);
 };
     return (
       <div className="cat-card">
