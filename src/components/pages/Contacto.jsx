@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from 'react';
+import AdoptForm from '../components/AdoptForm/AdoptForm';
+import '../AdoptForm/AdotForm.css'
 const Contacto = () => {
   return (
-    <h3>estoy en contacto</h3>
-  )
-}
+    <div>
+      <AdoptForm />
+    </div>
+  );
+};
 
-export default Contacto
+export default Contacto;
