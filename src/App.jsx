@@ -9,6 +9,7 @@ import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/pages/FavoritePage.jsx";
 
 function App() {
+  
   return (
     <Router>
       <NavBar />

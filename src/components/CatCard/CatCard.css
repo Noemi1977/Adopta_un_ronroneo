@@ -30,7 +30,6 @@
   border-radius: 5px;
 }
 
-/* Botón de adopción */
 .adopt-button {
   padding: 8px 12px;
   background-color: rgba(129, 202, 161, 1);
@@ -44,41 +43,16 @@
 .adopt-button:hover {
   background-color: #218838;
 }
-
-/* Estilos Responsivos  */
-
-/* Para móviles (pantallas menores a 480px) */
-@media (max-width: 480px) {
-  .cat-card {
-    width: 90%;  
-    height: auto; 
-    padding: 15px;
-  }
-
-  .image-container {
-    height: 150px;
-  }
-
-  .adopt-button {
-    width: 100%; 
-  }
+.favorite-button {
+  width: 30px; 
+  height: 30px;
+  font-size: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
-
-/* Para tablets y pantallas medianas (481px - 768px) */
-@media (max-width: 768px) {
-  .cat-card {
-    width: 45%; /* Dos tarjetas por fila */
-    height: auto;
-  }
-
-  .image-container {
-    height: 160px;
-  }
-}
-
-/* Para pantallas grandes (más de 768px) */
-@media (min-width: 769px) {
-  .cat-card {
-    width: 220px; /* Mantiene su tamaño original */
-  }
+.favorite-button:hover {
+  opacity: 1; /* Al pasar el mouse, se vuelve más visible */
+  filter: grayscale(0%); /* Vuelve el emoji a color */
 }

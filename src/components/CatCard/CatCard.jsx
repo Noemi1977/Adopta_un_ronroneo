@@ -1,17 +1,49 @@
 import { useNavigate } from "react-router-dom";
+import { useReducer, useEffect } from "react";
 import "./CatCard.css"; 
+
+// iniciaalizamos el useReducer cogiendo los datos de favoritos del localStore o delvolvemos un objeto vacio
+//  parce se encarga e convertirlo en un objeto
+const initState = JSON.parse(localStorage.getItem("favorites")) || {};
+
+// funcion reducer para controlar cuando cambia el valor de favoritos en stateFav
+function reducer(state, action){
+  switch (action.type){
+    case "cambioFav":
+      const newState = {...state, [action.payload]:!state[action.payload],};
+      localStorage.setItem("favorites",JSON.stringify(newState));
+      // transforma el objeto newState en una cadena de texto que puede ser almacenada en localStorage
+      // console.log(newState);
+      return newState;
+    default:
+      return state
+  }
+
+
+}
 
 
 function CatsCard({ cat }) {
   const navigate = useNavigate();
-  
+  const [stateFav, dispatch] = useReducer(reducer, initState );
+      
+  // Guardar en localStorage cada vez que cambien los favoritos
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(stateFav));
+    // console.log(JSON.parse(localStorage.getItem("favorites")));
+  }, [stateFav]);
+
   const handleAdoptClick = () => {
-    navigate("/Contacto"); // Redirige a la página de contacto
+    navigate("/Contacto"); 
   };
 
   if (!cat) {
-    return <div>No hay información del gato disponible.</div>;
+    return <div>No hay información del gato.</div>;
   }
+const cambiarFav= ()=>{
+  dispatch({type:"cambioFav", payload: cat.id})
+  // console.log({type:"cambioFav", payload: cat.id});
+};
     return (
       <div className="cat-card">
         <div className="image-container">
@@ -19,15 +51,15 @@ function CatsCard({ cat }) {
         </div>
         <div>
         <h3>{cat.name}</h3>
+        <button className="favorite-button" onClick={cambiarFav}>
+            {stateFav[cat.id] ? "💚" : "🤍"}
+        </button>
         <p>{cat.temperament}</p>
         </div>
         <div>
           
-            <button className="adopt-button"
-          onClick={handleAdoptClick} 
-        >
-          Adoptar
-        </button>
+        <button className="adopt-button" onClick={handleAdoptClick}>Adoptar</button>
+         
       </div>
     </div>
   );
