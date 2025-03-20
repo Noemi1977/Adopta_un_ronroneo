@@ -16,6 +16,9 @@ const NavBar = () => {
       <NavLink className="nav-link" to="/Adopta" activeclassname="active">
         Adopta
       </NavLink>
+      <NavLink className="nav-link" to="/Favoritos" activeclassname="active">
+        Gatos Favoritos
+      </NavLink>
       <NavLink className="nav-link" to="/Sobrenosotros" activeclassname="active">
         Sobre Nosotros
       </NavLink>
