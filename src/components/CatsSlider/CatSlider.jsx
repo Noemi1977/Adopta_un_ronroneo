@@ -47,6 +47,7 @@ function CatSlider() {
       </button>
     </div>
   );
-}
 
+
+}
 export default CatSlider;

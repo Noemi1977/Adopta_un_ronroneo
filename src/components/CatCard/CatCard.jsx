@@ -33,5 +33,4 @@ function CatsCard({ cat }) {
     </div>
   );
 }
-
 export default CatsCard;
