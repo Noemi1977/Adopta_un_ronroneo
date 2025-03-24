@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import CatsSlider from "./components/CatsSlider/CatSlider.jsx";
 import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
+import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
+
 
 function App() {
   
@@ -18,6 +20,7 @@ function App() {
         <Route path="/Adopta" element={<><Adopta /><CatsSlider /></>} />
         <Route path="/Contacto" element={<AdoptForm />} />
         <Route path="/construction" element={<PageInConstruction />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

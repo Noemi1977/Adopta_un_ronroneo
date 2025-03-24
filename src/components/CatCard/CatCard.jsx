@@ -12,14 +12,11 @@ function reducer(state, action){
     case "cambioFav":
       const newState = {...state, [action.payload]:!state[action.payload],};
       localStorage.setItem("favorites",JSON.stringify(newState));
-      // transforma el objeto newState en una cadena de texto que puede ser almacenada en localStorage
       // console.log(newState);
       return newState;
     default:
       return state
   }
-
-
 }
 
 
@@ -27,20 +24,14 @@ function CatsCard({ cat }) {
   const navigate = useNavigate();
   const [stateFav, dispatch] = useReducer(reducer, initState );
       
-  // Guardar en localStorage cada vez que cambien los favoritos
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(stateFav));
-    // console.log(JSON.parse(localStorage.getItem("favorites")));
-  }, [stateFav]);
-
   const handleAdoptClick = () => {
     navigate("/Contacto"); 
   };
-
-  if (!cat) {
-    return <div>No hay información del gato.</div>;
-  }
 const cambiarFav= ()=>{
+  if (!cat.id) {
+    console.error("El gato no tiene un ID ");
+    return;
+  }
   dispatch({type:"cambioFav", payload: cat.id})
   // console.log({type:"cambioFav", payload: cat.id});
 };

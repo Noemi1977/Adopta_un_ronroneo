@@ -22,6 +22,9 @@ const NavBar = () => {
       <NavLink className="nav-link" to="/Contacto" activeclassname="active">
         Contacto
       </NavLink>
+      <NavLink className="nav-link" to="/favorites" activeClassName="active">
+          Mis Favoritos
+        </NavLink>
     </div>
   </nav>
 );
