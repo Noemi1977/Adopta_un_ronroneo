@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   display: flex;
   justify-content: center;
@@ -7,19 +8,67 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Contenedor principal que agrupa la ficha del gato y el formulario */
 .form-container {
+  display: flex;
+  gap: 20px; /* Espaciado entre la ficha del gato y el formulario */
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  width: 800px; /* Ajusta el ancho total */
 }
 
-h1 {
+/* Contenedor que alinea la ficha del gato a la izquierda y el formulario a la derecha */
+.form-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Ficha del gato */
+.cat-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  color: #333;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px; /* Controla el tamaño de la ficha */
 }
 
+/* Contenedor de la imagen del gato */
+.cat-image-container {
+  width: 100%;
+  max-width: 250px; /* Limita el tamaño máximo */
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Imagen del gato */
+.cat-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Estilos del formulario */
+.adoption-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Campos de entrada y etiquetas */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -41,12 +90,14 @@ textarea {
   font-size: 16px;
 }
 
+/* Grupo de checkboxes */
 .checkbox-group {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
 
+/* Botón de envío */
 button {
   width: 100%;
   padding: 10px;
@@ -64,6 +115,7 @@ button:hover {
   background-color: #218838;
 }
 
+/* Mensaje de éxito */
 .mensaje-exito {
   background-color: #d4edda;
   color: #155724;
@@ -74,10 +126,11 @@ button:hover {
   font-weight: bold;
 }
 
+/* Estilos para términos y condiciones */
 .checkbox-terminos {
   display: flex;
   align-items: center;
-  gap: 20 px;
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -93,6 +146,7 @@ button:hover {
   cursor: pointer;
 }
 
+/* Mensajes de error */
 .error-message {
   color: red;
   font-size: 12px;
