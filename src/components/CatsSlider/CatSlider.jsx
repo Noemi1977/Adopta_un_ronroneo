@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import CatsCard from "../CatCard/CatCard";
 import { fetchCats } from "../../services/catService";
-import "./CatSlider.css"; 
+import "./CatSlider.css";
 
 function CatSlider() {
   const [cats, setCats] = useState([]);
-  const [slider, setSelider] = useState(0);
+  const [slider, setSlider] = useState(0);
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem("favorites")) || {}
+  );
 
   useEffect(() => {
     const getCats = async () => {
@@ -16,17 +19,25 @@ function CatSlider() {
     getCats();
   }, []);
 
+  // Función para manejar cambios en favoritos
+  const handleFavoriteChange = (id) => {
+    const newFavorites = { ...favorites, [id]: !favorites[id] };
+    setFavorites(newFavorites); // Actualiza el estado local
+    localStorage.setItem("favorites", JSON.stringify(newFavorites)); // Guarda en localStorage
+    console.log("Estado de favoritos actualizado:", newFavorites);
+  };
+
   const nCard = 7;
 
   const nextCard = () => {
     if (slider + nCard < cats.length) {
-      setSelider(slider + 1);
+      setSlider(slider + 1);
     }
   };
 
   const preCard = () => {
     if (slider > 0) {
-      setSelider(slider - 1);
+      setSlider(slider - 1);
     }
   };
 
@@ -38,11 +49,20 @@ function CatSlider() {
 
       <div className="cards-container">
         {cats.slice(slider, slider + nCard).map((cat) => (
-          <CatsCard key={cat.id} cat={cat} />
+          <CatsCard
+            key={cat.id}
+            cat={cat}
+            isFavorite={!!favorites[cat.id]}
+            onToggleFavorite={() => handleFavoriteChange(cat.id)}
+          />
         ))}
       </div>
 
-      <button onClick={nextCard} disabled={slider + nCard >= cats.length} className="slider-button">
+      <button
+        onClick={nextCard}
+        disabled={slider + nCard >= cats.length}
+        className="slider-button"
+      >
         ▶
       </button>
     </div>
