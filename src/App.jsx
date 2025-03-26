@@ -8,30 +8,11 @@ import CatsSlider from "./components/CatsSlider/CatSlider.jsx";
 import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
-import { ThemeContext } from "./themeContext";
-import { themes } from "./themeStyles";
-import ToggleThemeButton from "./components/Button/ToggleThemeButton.jsx";
 
 const App = () => {
-  // Consumir el contexto
-  const { theme } = useContext(ThemeContext);
-
-  // Obtener los estilos del tema actual
-  const currentTheme = themes[theme];
-
+ 
   return (
-    <div
-      style={{
-        backgroundColor: currentTheme.backgroundColor,
-        color: currentTheme.textColor,
-        padding: "20px",
-        minHeight: "100vh",
-      }}
-    >
-      <h1>Aplicación con Dark Theme</h1>
-      <p>Este es un ejemplo de una aplicación con soporte para temas.</p>
-      <ToggleThemeButton />
-      
+    <div>
     <Router>
       <NavBar />
       <Routes>
