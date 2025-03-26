@@ -5,7 +5,7 @@ function CatsCard({ cat, isFavorite, onToggleFavorite }) {
   const navigate = useNavigate();
 
   const handleAdoptClick = () => {
-    navigate("/Contacto");
+    navigate("/Contacto", { state: { cat } });
   };
 
   return (
