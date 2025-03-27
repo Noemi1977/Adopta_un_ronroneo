@@ -42,8 +42,9 @@ function AdoptForm() {
             <div className="cat-image-container">
                 <img src={cat.url} alt={cat.name} className="cat-image" />
             </div>
-            <p><strong>Temperamento:</strong> {cat.temperament}</p>
-          </div>
+              <p><strong>Temperamento:</strong> {cat.temperament}</p>
+              <p><strong>Descripcion:</strong> {cat.description}</p>
+           </div>
         )}
 
         {/* Formulario a la derecha */}
