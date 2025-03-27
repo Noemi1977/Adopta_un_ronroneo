@@ -1,10 +1,12 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaX } from "react-icons/fa6";
 import "./Footer.css"; 
+import { useTheme } from '../../context/ThemeContext';
 
 const Footer = () => {
+  const { isDarkMode } = useTheme();
   return (
-    <footer className="footer">
+    <footer className={`footer ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="footer-container">
         
         {/* Información de contacto */}

@@ -74,7 +74,7 @@ p {
   padding: 20px;
 }
 
-/* Estilos para la sección izquierda (contenido de texto) */
+
 .sectionInit {
   flex: 1; /* Ocupa el 50% del contenedor */
   padding: 20px; /* Espaciado interno */
@@ -84,8 +84,8 @@ p {
 
 /* Estilos para la sección derecha (imagen) */
 .sectionImg {
-  flex: 1; /* Ocupa el 50% del contenedor */
-  text-align: center; /* Centra la imagen */
+  flex: 1; 
+  text-align: center; 
 }
 
 /* Estilos para la imagen */
@@ -107,50 +107,18 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   color:rgba(94, 70, 41, 1);
+  
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 /* Modo oscuro */
 .dark {
   background-color: #080808;
-  color: #f9f9f9;
+  color: whitesmoke
 }
 
 .dark .sectionInit {
   background-color: #090909;
-  color: #ffffff;
+  color: whitesmoke;
 }
 
-.dark a {
-  color: #f1c40f;
-}
 
-.dark a:hover {
-  color: #f39c12;
-}
-
-.dark button {
-  background-color: #444;
-  color: #f9f9f9;
-}
-
-.dark button:hover {
-  border-color: #f1c40f;
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
