@@ -27,7 +27,7 @@ function CatSlider() {
     // console.log("favoritos:", newFavorites);
   };
 
-  const nCard = 7; 
+  const nCard = 6; 
 
   const nextCard = () => {
     if (slider + nCard < cats.length) {

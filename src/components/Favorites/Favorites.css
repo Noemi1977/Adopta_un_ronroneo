@@ -1,22 +1,71 @@
+/* Contenedor principal */
 .favorites-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Centrar las tarjetas */
+}
+
+@media (max-width: 768px) {
+  .favorites-container {
+    flex-direction: column; /* Apilar tarjetas verticalmente en móviles */
+    align-items: center; /* Centrar las tarjetas */
   }
-  
+}
+
+/* Estilos de las tarjetas */
+.favorite-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px; /* Ancho fijo para escritorios */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Efecto hover */
+}
+
+.favorite-card:hover {
+  transform: scale(1.05); /* Agrandar ligeramente al pasar el mouse */
+}
+
+@media (max-width: 768px) {
   .favorite-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ocupar todo el ancho en móviles */
+    max-width: 300px; /* Límite máximo para tablets */
   }
-  
+}
+
+/* Estilos de las imágenes */
+.favorite-card img {
+  width: 100%;
+  height: 150px; /* Altura fija para escritorios */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
   .favorite-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
+    height: 120px; /* Altura más pequeña para móviles */
   }
+}
+
+/* Estilos del título */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem; /* Tamaño grande para escritorios */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+  }
+}
+
+/* Mensaje cuando no hay favoritos */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
