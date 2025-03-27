@@ -19,13 +19,13 @@ const Footer = () => {
 
         {/* Redes sociales */}
         <div className="footer-section social-icons">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <FaFacebook size={32} color="#1877F2" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={32} color="#E1306C" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
             <FaX size={32} color="#1DA1F2" />
           </a>
         </div>
