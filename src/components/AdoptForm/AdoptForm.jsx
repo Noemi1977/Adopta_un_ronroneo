@@ -49,8 +49,9 @@ function AdoptForm() {
           {mensajeExito && <div className="mensaje-exito">{mensajeExito}</div>}
 
           <div className="input-group">
-            <label>Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
             <input
+              id="nombre"
               type="text"
               {...register("nombre", {
                 required: { value: true, message: "Nombre es requerido" },
@@ -62,8 +63,9 @@ function AdoptForm() {
           {errors.nombre && <span className="error-message">{errors.nombre.message}</span>}
 
           <div className="input-group">
-            <label>Correo</label>
+            <label htmlFor="email">Correo</label>
             <input
+              id="email"
               type="email"
               {...register("email", {
                 required: { value: true, message: "Correo requerido" },
@@ -77,20 +79,22 @@ function AdoptForm() {
           {errors.email && <span className="error-message">{errors.email.message}</span>}
 
           <div className="input-group">
-            <label>Teléfono</label>
+            <label htmlFor="telefono">Teléfono</label>
             <input
+              id="telefono"
               type="text"
               {...register("telefono", {
                 required: { value: true, message: "Necesitamos un teléfono de contacto" },
-                pattern: { value: /^[0-9]{9}$/, message: "El teléfono debe tener 9 dígitos numéricos" },
+                pattern: { value: /^[0-9\s\-]{9,15}$/, message: "El teléfono debe tener entre 9 y 15 caracteres numéricos, espacios o guiones" },
               })}
             />
           </div>
           {errors.telefono && <span className="error-message">{errors.telefono.message}</span>}
 
           <div className="checkbox-group">
-            <label>
+            <label  htmlFor="adopcion">
               <input
+                id="adopcion"
                 type="checkbox"
                 {...register("adopcion")}
                 checked={adopcion}
@@ -102,8 +106,9 @@ function AdoptForm() {
               Adopción
             </label>
 
-            <label>
+            <label htmlFor="apadrinamiento">
               <input
+                id="apadrinamiento"
                 type="checkbox"
                 {...register("apadrinamiento")}
                 checked={apadrinamiento}
@@ -117,7 +122,7 @@ function AdoptForm() {
           </div>
 
           <div className="input-group">
-            <label>Mensaje</label>
+            <label htmlFor="mensaje">Mensaje</label>
             <textarea
               id="mensaje"
               {...register("mensaje", {
@@ -129,14 +134,15 @@ function AdoptForm() {
           {errors.mensaje && <span className="error-message">{errors.mensaje.message}</span>}
 
           <div className="checkbox-terminos">
-            <label>
+            <label htmlFor="terminos">
               <input
+                id="terminos"
                 type="checkbox"
                 {...register("terminos", {
                   required: { value: true, message: "Tienes que aceptar los términos y condiciones" },
                 })}
               />
-              Acepto los términos y condiciones
+               Acepto los términos y condiciones
             </label>
           </div>
           {errors.terminos && <span className="error-message">{errors.terminos.message}</span>}

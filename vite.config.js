@@ -1,7 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  test: {
+    globals: true, // Habilita variables globales como `describe`, `it`, etc.
+    environment: 'jsdom', // Simula un entorno de navegador
+    setupFiles: './vitest.setup.js', // Archivo de configuración adicional
+  },
+});
