@@ -45,7 +45,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: background-color 0.3s ease, color 0.3s ease;
-  height: 70px; /* Altura fija para evitar que el contenido se desborde */
+  height: 150px; /* Altura fija para evitar que el contenido se desborde */
 }
 
 .navbar.dark-mode {
@@ -70,7 +70,7 @@ body {
 }
 
 .logo {
-  width: 120%;
+  width: 150%;
   height: auto;
   transform: scale(1.2);
 }
