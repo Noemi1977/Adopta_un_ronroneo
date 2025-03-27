@@ -50,7 +50,7 @@ npm install react-icons
 
 ## Capturas de Pantalla
 
-[(public\captura_Inicio.png)]
+[Pantalla de inicio](public\captura_Inicio.png)
 
 ## Proyecto Educativo
 
@@ -64,8 +64,8 @@ Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
 
 Puedes encontrarnos en GitHub:
 
-Noemi: [GitHub de Noemi](https://github.com/Noemi1977)
-Rafael:[GitHub de Rafael](https://github.com/FaloCurso)
-Dani: [GitHub de Dani](https://github.com/SaldaDani)
+Noemi: [GitHub de Noemi](https://github.com/Noemi1977);
+Rafael:[GitHub de Rafael](https://github.com/FaloCurso);
+Dani: [GitHub de Dani](https://github.com/SaldaDani):
 
 ¡No dudes en contactarnos si tienes alguna pregunta o sugerencia!
