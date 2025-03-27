@@ -4,27 +4,34 @@
     bottom: 0;
     left: 0;
     background-color: rgba(129, 202, 161, 1);
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    height: 120px;
+    font-size: 0.9rem;
+    color:rgba(94, 70, 41, 1);
   }
 
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+  }
+  .footer.dark-mode {
+    background-color: rgb(36, 77, 58);
+    color:white
   }
   
   .footer-section {
     flex: 1;
     min-width: 250px;
-    margin: 10px;
+    margin: 5px;
   }
   
   .footer h3 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .footer ul {
@@ -33,12 +40,12 @@
   }
   
   .footer ul li {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
   
   .footer a {
-    color: #333;
-    text-decoration: none;
+    color:inherit;
+    text-decoration:none;
   }
   
   .footer a:hover {
@@ -59,5 +66,60 @@
   /* Pie de página */
   .footer-bottom {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
   }
+  /* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 5px 0; /* Reducimos el padding */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Apilamos las secciones verticalmente */
+    align-items: center; /* Centramos las secciones */
+    gap: 10px;
+  }
+
+  .footer-section {
+    min-width: 100%; /* Cada sección ocupa todo el ancho */
+    text-align: center; /* Centramos el contenido */
+  }
+
+  .footer h3 {
+    font-size: 14px; /* Mantenemos el mismo tamaño */
+  }
+
+  .footer p,
+  .footer ul li {
+    font-size: 12px; /* Mantenemos el mismo tamaño */
+  }
+
+  .social-icons {
+    gap: 8px; /* Reducimos el espacio entre los iconos */
+  }
+
+  .social-icons a svg {
+    width: 20px; /* Reducimos el tamaño de los iconos */
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 5px 0; /* Reducimos aún más el padding */
+  }
+
+  .footer h3 {
+    font-size: 12px; /* Reducimos el tamaño de los títulos */
+  }
+
+  .footer p,
+  .footer ul li {
+    font-size: 10px; /* Reducimos el tamaño del texto */
+  }
+
+  .social-icons a svg {
+    width: 18px; /* Reducimos aún más el tamaño de los iconos */
+    height: 18px;
+  }}

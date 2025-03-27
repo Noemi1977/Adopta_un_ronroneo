@@ -1,12 +1,71 @@
-# React + Vite
+# Adopta un Ronroneo 🐱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del Proyecto
 
-Currently, two official plugins are available:
+Adopta un Ronroneo es una página web dedicada a ayudar a gatitos a encontrar un hogar.
+Nuestra aplicación permite a los usuarios:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualizar gatitos disponibles para adopción o apadrinamiento
+- Conocer la historia de nuestra protectora
+- Conocer a los participantes del proyecto
+- Explorar el proyecto en modo claro u oscuro
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- JavaScript Vanilla
+- CSS Puro
+
+## Funcionalidades
+
+- Visualización de gatitos en adopción
+- Botón de adopción/apadrinamiento
+- Modo oscuro
+- Información sobre la protectora
+- Presentación del equipo
+
+## Integrantes del Proyecto
+
+- Noemi
+- Rafael
+- Dani
+
+## Dependencias e Importaciones
+
+### Instalación
+
+1. Clona el repositorio
+git clone [https://github.com/Noemi1977/Adopta_un_ronroneo.git]
+
+2. Instala la API
+Regístrate en TheCatAPI y obtén tu API Key
+
+3. Instala las dependencias
+npm install
+npm install react-hook-form
+npm install -D vitest
+npm install -D @testing-library/react @testing-library/jest-dom
+npm install -D jsdom
+npm install react-icons
+
+## Capturas de Pantalla
+
+[Pantalla de inicio](./public/captura_Inicio.png)
+
+## Proyecto Educativo
+
+Este proyecto fue desarrollado como parte del programa de formación de [Factoria F5](https://factoriaf5.org/).
+
+## Licencia
+
+Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+
+## Contacto
+
+Puedes encontrarnos en GitHub:
+
+Noemi: [GitHub de Noemi](https://github.com/Noemi1977);
+Rafael:[GitHub de Rafael](https://github.com/FaloCurso);
+Dani: [GitHub de Dani](https://github.com/SaldaDani):
+
+¡No dudes en contactarnos si tienes alguna pregunta o sugerencia!
