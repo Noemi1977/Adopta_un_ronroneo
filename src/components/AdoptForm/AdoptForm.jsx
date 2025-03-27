@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom"; 
 import "./AdoptForm.css";
+import { useTheme  } from '../../context/ThemeContext.jsx';
 
 function AdoptForm() {
+  const { isDarkMode } = useTheme(); // Obtener el estado del tema
   const location = useLocation(); 
   const cat = location.state?.cat; 
   const navigate = useNavigate(); // Hook para manejar la navegación
@@ -33,13 +35,13 @@ function AdoptForm() {
   });
 
   return (
-    <div className="form-container">
+    <div className={`form-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="form-layout"> 
         {/* Ficha del gato*/}
         {cat && (
-          <div className="cat-info">
+          <div className={`cat-info ${isDarkMode ? 'dark-mode' : ''}`}>
             <h2><strong>Nombre:</strong> {cat.name}</h2>
-            <div className="cat-image-container">
+            <div className= {`cat-image-container ${isDarkMode ? 'dark-mode' : ''}`}> 
                 <img src={cat.url} alt={cat.name} className="cat-image" />
             </div>
               <p><strong>Temperamento:</strong> {cat.temperament}</p>

@@ -16,8 +16,14 @@
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Estilos para el modo oscuro */
+.navbar.dark-mode {
+  background-color: rgb(36, 77, 58); /* Verde oscuro más profundo */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
 
 .logo-container {
   width: 100px;
@@ -28,6 +34,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.dark-mode .logo-container {
+  background-color: rgba(200, 200, 200, 0.2); /* Fondo más tenue en modo oscuro */
 }
 
 .logo {
@@ -47,14 +58,26 @@
   font-weight: 500;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.dark-mode .nav-link {
+  color: rgba(255, 255, 255, 0.8); /* Color de texto claro en modo oscuro */
 }
 
 .nav-link:hover {
   background-color: #e9ecef;
 }
 
+.navbar.dark-mode .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover más sutil en modo oscuro */
+}
+
 .nav-link.active {
   font-weight: bold;
   color: rgba(94, 70, 41, 1);
+}
+
+.navbar.dark-mode .nav-link.active {
+  color: white; /* Color de texto activo en modo oscuro */
 }
