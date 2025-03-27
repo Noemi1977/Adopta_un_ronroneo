@@ -50,7 +50,7 @@ npm install react-icons
 
 ## Capturas de Pantalla
 
-[Pantalla de inicio](public\captura_Inicio.png)
+[Pantalla de inicio](./public/captura_Inicio.png)
 
 ## Proyecto Educativo
 
