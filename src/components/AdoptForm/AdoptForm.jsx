@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation } from "react-router-dom"; 
+import { useLocation, useNavigate } from "react-router-dom"; 
 import "./AdoptForm.css";
 
 function AdoptForm() {
   const location = useLocation(); 
   const cat = location.state?.cat; 
+  const navigate = useNavigate(); // Hook para manejar la navegación
 
   const { register, handleSubmit, watch, setValue, reset, formState: { errors } } = useForm();
   const [mensajeExito, setMensajeExito] = useState("");
@@ -24,8 +25,11 @@ function AdoptForm() {
   const onSubmit = handleSubmit((data) => {
     console.log("Datos enviados:", data);
     setMensajeExito("📨 Correo enviado con éxito");
-    reset();
-    setTimeout(() => setMensajeExito(""), 4000);
+    setTimeout(() => {
+      setMensajeExito("");
+      reset();
+      navigate(-1);
+    }, 4000);
   });
 
   return (
@@ -37,7 +41,7 @@ function AdoptForm() {
             <h2><strong>Nombre:</strong> {cat.name}</h2>
             <div className="cat-image-container">
                 <img src={cat.url} alt={cat.name} className="cat-image" />
-        </div>
+            </div>
             <p><strong>Temperamento:</strong> {cat.temperament}</p>
           </div>
         )}
@@ -92,7 +96,7 @@ function AdoptForm() {
           {errors.telefono && <span className="error-message">{errors.telefono.message}</span>}
 
           <div className="checkbox-group">
-            <label  htmlFor="adopcion">
+            <label htmlFor="adopcion">
               <input
                 id="adopcion"
                 type="checkbox"

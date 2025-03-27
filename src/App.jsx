@@ -7,6 +7,7 @@ import CatsSlider from "./components/CatsSlider/CatSlider.jsx";
 import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
+import './App.css';
 
 
 function App() {
