@@ -8,6 +8,7 @@ import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import "./App.css";
 
 
 function App() {
