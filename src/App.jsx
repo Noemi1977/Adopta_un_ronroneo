@@ -8,11 +8,17 @@ import CatsSlider from "./components/CatsSlider/CatSlider.jsx";
 import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
+import ThemeToggle from './components/DarkTheme/ThemeToggle.jsx';
+import './App.css';
+import { ThemeProvider } from "./context/ThemeContext"; // Importar el ThemeProvider
+
 
 const App = () => {
  
   return (
+    <ThemeProvider>
     <div>
+      <ThemeToggle/>
     <Router>
       <NavBar />
       <Routes>
@@ -27,6 +33,7 @@ const App = () => {
     </Router>
 
     </div>
+    </ThemeProvider>
   );
 };
 

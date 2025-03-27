@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -12,13 +13,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  background-color: rgba(129, 202, 161, 1);
+  background-color: rgba(129, 202, 161, 1); /* Verde claro */
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
+/* Modo oscuro: cambia el color de la navbar */
+body.dark-mode .navbar {
+  background-color: rgba(34, 47, 41, 1); /* Verde oscuro */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
 
+/* LOGO */
 .logo-container {
   width: 100px;
   height: 100px;
@@ -31,11 +39,12 @@
 }
 
 .logo {
-  width: 120%;  
+  width: 120%;
   height: auto;
   transform: scale(1.2);
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -43,18 +52,40 @@
 
 .nav-link {
   text-decoration: none;
-  color: rgba(94, 70, 41, 1);
+  color: rgba(94, 70, 41, 1); /* Marrón */
   font-weight: 500;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover en modo claro */
 .nav-link:hover {
   background-color: #e9ecef;
 }
 
+/* Activo en modo claro */
 .nav-link.active {
   font-weight: bold;
   color: rgba(94, 70, 41, 1);
+}
+
+/* MODO OSCURO */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Links en modo oscuro */
+body.dark-mode .nav-link {
+  color: rgba(214, 214, 214, 1); /* Gris claro */
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Activo en modo oscuro */
+body.dark-mode .nav-link.active {
+  color: #f5a623; /* Naranja suave */
 }

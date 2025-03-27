@@ -1,9 +1,12 @@
 import React from 'react';
 
+
+
 const Inicio = () => {
   return (
+    
     <div className="container">
-      <section className="sectionInit">
+       <section className="sectionInit"> 
         <h1>🐾 Bienvenidos a adopta un Ronroneo 🐾</h1>
         <p>
           En Adopta un Ronroneo, creemos que cada vida cuenta. Nos dedicamos al rescate, rehabilitación y adopción de animales en situación de abandono o maltrato, brindándoles una segunda oportunidad para encontrar un hogar lleno de amor.
@@ -22,7 +25,7 @@ const Inicio = () => {
         <p>Visítanos y descubre cómo juntos podemos hacer la diferencia. Cada acción cuenta y con tu apoyo podemos seguir protegiendo a quienes más lo necesitan.</p>
 
         <p>✨ ¡Dales una segunda oportunidad, ellos te lo agradecerán con amor incondicional! ✨</p>
-      </section>
+      </section> 
 
       <section className="sectionImg">
         <img src="/foto inicio.png" alt="Imagen inicio" />
