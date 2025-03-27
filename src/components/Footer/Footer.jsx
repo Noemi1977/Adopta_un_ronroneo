@@ -32,6 +32,7 @@ const Footer = () => {
           </a>
         </div>
 
+        
         {/* Aviso legal */}
         <div className="footer-section">
           <h3>Aviso Legal</h3>
@@ -42,10 +43,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Pie de página */}
+      {/* Pie de página
       <div className="footer-bottom">
         <p>© Factoria F5</p>
-      </div>
+      </div> */}
     </footer>
   );
 };
