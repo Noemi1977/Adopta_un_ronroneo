@@ -1,38 +1,104 @@
+/* Estilos generales del contenedor principal */
 .listado-cat {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .gato-item {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    padding: 8px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .gato-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10%;
-    margin-right: 12px;
-  }
-  
-  .gato-info {
-    flex: 1;
-  }
-  
-  .gato-info h2 {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  .gato-info p {
-    font-size: 12px;
-    color: #555;
-    margin: 2px 0;
-  }
-  
+  max-width: 1000px; /* Aumentamos el ancho máximo para el carrusel */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.buscador {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Estilos del carrusel */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.slider-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+  background-color: #0056b3;
+}
+
+.slider-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Estilos de las tarjetas de gatos */
+.gato-item {
+  width: 200px; /* Ancho fijo para las tarjetas */
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gato-item:hover {
+  transform: scale(1.05); /* Efecto de hover */
+}
+
+.gato-item img {
+  width: 100%;
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+.gato-info {
+  flex: 1;
+}
+
+.gato-info h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.gato-info p {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+  color: red;
+  font-size: 1rem;
+  margin-top: 20px;
+}

@@ -42,6 +42,7 @@ function CatSlider() {
   };
 
   return (
+    
     <SliderContainer
       cats={cats.map((cat) => ({ ...cat, isFavorite: favorites[cat.id] }))}
       slider={slider}

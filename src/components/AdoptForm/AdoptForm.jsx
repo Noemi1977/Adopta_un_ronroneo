@@ -142,7 +142,7 @@ function AdoptForm() {
                   required: { value: true, message: "Tienes que aceptar los términos y condiciones" },
                 })}
               />
-              Acepto los términos y condiciones
+               Acepto los términos y condiciones
             </label>
           </div>
           {errors.terminos && <span className="error-message">{errors.terminos.message}</span>}
