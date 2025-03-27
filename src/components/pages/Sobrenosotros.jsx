@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTheme  } from '../../context/ThemeContext.jsx';
 
 const Sobrenosotros = () => {
+  const { isDarkMode } = useTheme();
   return (
    <div>
     <h1>🐾 Sobre Nosotros 🐾</h1>
-    <div className="container">
+    <div className={`container ${isDarkMode ? "dark" : "light"}`}>
       <section className="sectionInit">
         <p>
         Somos un equipo apasionado de amantes de los animales comprometidos con su bienestar. Nuestro propósito es rescatar, rehabilitar y encontrar hogares responsables para perros y gatos en situación de abandono o maltrato.
