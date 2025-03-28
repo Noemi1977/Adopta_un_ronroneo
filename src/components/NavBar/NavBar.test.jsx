@@ -1,72 +1,73 @@
-import { render, screen } from "@testing-library/react"; // render, buscame esta pagina que quiero revisarla, screen es para buscar elementos en la pagina 
-import { MemoryRouter } from "react-router-dom"; // MemoryRouter es un componente que nos permite simular la navegación en nuestra aplicación sin necesidad de un navegador real
-
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "../../context/ThemeContext";
 import NavBar from "./NavBar";
 
-describe("Pruebas del componente NavBar", () => {
-  test("Renderiza correctamente todos los enlaces", () => {
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
 
-    // Verificar que los enlaces están presentes
-    expect(screen.getByRole("link", { name: /inicio/i })).toBeInTheDocument(); // getByRole busca un elemento por su rol
+describe("Pruebas del componente NavBar con modo oscuro", () => {
+  const renderWithProviders = (ui) => {
+    return render(
+      <ThemeProvider>
+        <MemoryRouter>{ui}</MemoryRouter>
+      </ThemeProvider>
+    );
+  };
+
+  test("Renderiza correctamente todos los enlaces", () => {
+    renderWithProviders(<NavBar />);
+
+    expect(screen.getByRole("link", { name: /inicio/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /adopta/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /sobre nosotros/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /contacto/i })).toBeInTheDocument();
   });
 
   test("El logo se renderiza correctamente", () => {
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
+    renderWithProviders(<NavBar />);
 
-    // Verificar que el logo está presente
     const logoElement = screen.getByAltText("Logo");
-    expect(logoElement).toBeInTheDocument(); //esta el logo?
-    expect(logoElement).toHaveAttribute("src", "/Logo.png"); // es esta la imagen?
+    expect(logoElement).toBeInTheDocument();
+    expect(logoElement).toHaveAttribute("src", "/Logo.png");
   });
 
   test("Aplica la clase 'active' al enlace seleccionado", () => {
     render(
-      <MemoryRouter initialEntries={["/Adopta"]}> //simulamos que estamos en adopta 
-        <NavBar />
-      </MemoryRouter>
+      <ThemeProvider>
+        <MemoryRouter initialEntries={["/Adopta"]}>
+          <NavBar />
+        </MemoryRouter>
+      </ThemeProvider>
     );
 
-    // Verificar que el enlace "Adopta" tiene la clase 'active'
     const adoptLink = screen.getByRole("link", { name: /adopta/i });
-    expect(adoptLink).toHaveClass("active"); //El boton de adopta esta resaltado
+    expect(adoptLink).toHaveClass("active");
   });
-
 
   test("Navega correctamente al hacer clic en un enlace", () => {
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
-  
-    // Verificar que el enlace "Contacto" tiene el atributo href correcto
-    const contactLink = screen.getByRole("link", { name: /contacto/i });
-    expect(contactLink).toHaveAttribute("href", "/Contacto"); //El boton de contacto me lleva a contacto
-  
-    // Verificar que el enlace "Adopta" tiene el atributo href correcto
-    const adoptLink = screen.getByRole("link", { name: /adopta/i });
-    expect(adoptLink).toHaveAttribute("href", "/Adopta");
-  
-    // Verificar que el enlace "Sobre Nosotros" tiene el atributo href correcto
-    const aboutUsLink = screen.getByRole("link", { name: /sobre nosotros/i });
-    expect(aboutUsLink).toHaveAttribute("href", "/Sobrenosotros");
-  
-    // Verificar que el enlace "Inicio" tiene el atributo href correcto
-    const homeLink = screen.getByRole("link", { name: /inicio/i });
-    expect(homeLink).toHaveAttribute("href", "/");
+    renderWithProviders(<NavBar />);
+
+    expect(screen.getByRole("link", { name: /contacto/i })).toHaveAttribute("href", "/Contacto");
+    expect(screen.getByRole("link", { name: /adopta/i })).toHaveAttribute("href", "/Adopta");
+    expect(screen.getByRole("link", { name: /sobre nosotros/i })).toHaveAttribute("href", "/Sobrenosotros");
+    expect(screen.getByRole("link", { name: /inicio/i })).toHaveAttribute("href", "/");
   });
 
-  
+  test("El NavBar aplica la clase 'dark-mode' en modo oscuro", () => {
+    render(
+      <ThemeProvider>
+        <MemoryRouter>
+          <NavBar />
+        </MemoryRouter>
+      </ThemeProvider>
+    );
+
+    const navElement = screen.getByRole("navigation");
+    expect(navElement).toBeInTheDocument();
+
+    // Simular que el tema oscuro está activado
+    document.documentElement.classList.add("dark-mode");
+
+    // Verificar que el NavBar tiene la clase dark-mode
+    expect(navElement).toHaveClass("dark-mode");
+  });
 });
