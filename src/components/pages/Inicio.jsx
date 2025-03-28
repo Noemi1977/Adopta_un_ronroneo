@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTheme  } from '../../context/ThemeContext.jsx';
 
 const Inicio = () => {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="container">
+    <div className={`container ${isDarkMode ? "dark" : "light"}`}>
       <section className="sectionInit">
         <h1>🐾 Bienvenidos a adopta un Ronroneo 🐾</h1>
         <p>

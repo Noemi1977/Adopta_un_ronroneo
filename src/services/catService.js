@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=true";
+const API_URL = "https://api.thecatapi.com/v1/images/search?limit=12&has_breeds=true";
 const API_KEY = "live_xR2TUfUJM57eCOuupoNfWYtDRBDd2qxwnVrG3MiROhHTmVSsVtHXs0IbfUGeYoHQ";
 
 export const fetchCats = async () => {
@@ -9,7 +9,7 @@ export const fetchCats = async () => {
       headers: { "x-api-key": API_KEY }
     });
     console.log(response.data);
-    localStorage.removeItem("favorites");
+    // localStorage.removeItem("favorites");
 
     //  map crea un nuevo array y recorre cada gato y transforma los datos en un nuevo objeto con la estructura que queremos.
     const catsData = response.data.map(cat=>({

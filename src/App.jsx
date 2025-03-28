@@ -1,3 +1,5 @@
+//App.jsx
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Inicio from "./components/pages/Inicio.jsx"
 import Adopta from "./components/pages/Adopta.jsx";
@@ -7,11 +9,19 @@ import CatsSlider from "./components/CatsSlider/CatSlider.jsx";
 import AdoptForm from "./components/AdoptForm/AdoptForm.jsx";
 import PageInConstruction from "./components/pages/PageInConstruction.jsx";
 import FavoritesPage from "./components/Favorites/FavoritesPage.jsx";
+import ThemeToggle from './components/DarkTheme/ThemeToggle.jsx';
+import './App.css';
+import { ThemeProvider } from "./context/ThemeContext"; // Importar el ThemeProvider
+import Footer from "./components/Footer/Footer.jsx";
 
 
-function App() {
-  
+
+const App = () => {
+ 
   return (
+    <ThemeProvider>
+    <div>
+      <ThemeToggle/>
     <Router>
       <NavBar />
       <Routes>
@@ -23,8 +33,13 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer />
     </Router>
+
+    </div>
+    </ThemeProvider>
+    
   );
-}
+};
 
 export default App;
