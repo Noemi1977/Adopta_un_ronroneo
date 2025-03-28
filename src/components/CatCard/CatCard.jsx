@@ -28,7 +28,7 @@ function CatsCard({ cat, isFavorite: initialIsFavorite, onToggleFavorite }) {
 
   const handleToggleFavorite = () => {
     dispatch({ type: "TOGGLE_FAVORITE" }); 
-    onToggleFavorite(); // Llama a la función externa pasada como prop
+    onToggleFavorite(); 
   };
 
   return (
