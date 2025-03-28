@@ -150,7 +150,9 @@ input[type="email"].dark-mode,
 input[type="tel"].dark-mode,
 input[type="message"].dark-mode,
 textarea.dark-mode {
-  background-color: #e6e4e4;}
+  background-color: #e6e4e4;
+  color: black;
+}
 
 .checkbox-group {
   display: flex;
@@ -216,7 +218,7 @@ button:hover {
 }
 
 .error-message {
-  color: red;
+  color:rgb(87, 183, 87);
   font-size: 0.875rem;
   margin-top: 3px;
 }
@@ -298,6 +300,7 @@ button:hover {
 /* Mejoras adicionales para inputs y botones */
 input, textarea {
   transition: all 0.3s ease;
+  color: black;
 }
 
 input:focus, textarea:focus {
